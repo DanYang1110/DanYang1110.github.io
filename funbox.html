@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Box AI 戰鬥陀螺 快速連結</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f7f6;
+            color: #333;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #2980b9;
+            margin-top: 40px;
+            border-bottom: 2px solid #bdc3c7;
+            padding-bottom: 5px;
+        }
+        h3 {
+            color: #d35400;
+            margin-top: 25px;
+            background-color: #ffeaa7;
+            padding: 8px 15px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background: #fff;
+            padding: 12px 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: all 0.2s ease;
+            border-left: 4px solid transparent;
+            
+            /* 新增排版：讓內部元素水平對齊，並將按鈕推到最右邊 */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        li:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-left: 4px solid #3498db;
+        }
+        a.store-name {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 600;
+            flex-grow: 1; /* 讓名稱佔滿剩餘空間 */
+        }
+        a.store-name:hover {
+            color: #e74c3c;
+        }
+        
+        /* 新增：右側「前往」按鈕的樣式 */
+        .go-btn {
+            background-color: #e74c3c;
+            color: white !important;
+            padding: 6px 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+            transition: background-color 0.2s, transform 0.1s;
+            cursor: pointer;
+            user-select: none;
+        }
+        .go-btn:hover {
+            background-color: #c0392b;
+        }
+        .go-btn:active {
+            transform: scale(0.95);
+        }
+        /* 新增：點擊後的狀態樣式 */
+        .go-btn.clicked {
+            background-color: #95a5a6; /* 變成灰色 */
+            pointer-events: none; /* 點擊後停用按鈕效果 */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Fun Box AI</h1>
+
+    <h2>【陀螺與改造組】</h2>
+
+    <h3>BX-09 戰鬥陀螺X通行證</h3>
+    <ul>
+        <li><a class="store-name" href="https://lin.ee/Z76uTqx" target="_blank">台北大巨蛋店funbox</a></li>
+        <li><a class="store-name" href="https://lin.ee/YshEzMr" target="_blank">忠孝Sogo funbox</a></li>
+        <li><a class="store-name" href="https://lin.ee/VVb3tBK" target="_blank">Funbox 天母SOGO</a></li>
+        <li><a class="store-name" href="https://lin.ee/ZIWynRV" target="_blank">Funbox遠百信義 A13</a></li>
+        <li><a class="store-name" href="https://lin.ee/qYc5zOR" target="_blank">Funbox天母三越</a></li>
+        <li><a class="store-name" href="https://lin.ee/76XiEqu" target="_blank">Funbox-新光三越站前店</a></li>
+        <li><a class="store-name" href="https://lin.ee/oy7Cz9BP" target="_blank">Funbox-南港潤泰</a></li>
+        <li><a class="store-name" href="https://lin.ee/ZJfKF22" target="_blank">Funbox-信義A8</a></li>
+        <li><a class="store-name" href="https://lin.ee/vXQuxDN" target="_blank">Funbox 樹林秀泰</a></li>
+        <li><a class="store-name" href="https://lin.ee/7TK6Kqw" target="_blank">Funbox-新店誠品-裕隆城</a></li>
+        <li><a class="store-name" href="https://lin.ee/7IrVvjjs" target="_blank">Funbox 板橋大遠百</a></li>
+        <li><a class="store-name" href="https://lin.ee/u3dIcDP" target="_blank">Funbox 中和環球</a></li>
+        <li><a class="store-name" href="https://lin.ee/VcXFtoV" target="_blank">funbox板橋遠百中山店</a></li>
+        <li><a class="store-name" href="https://lin.ee/7PFgK96" target="_blank">FunBox-環球桃園A19</a></li>
+        <li><a class="store-name" href="https://lin.ee/pAfl4Sp" target="_blank">Funbox Toys 桃園新光站前店</a></li>
+    </ul>
+
+    <h3>CX-11 帝王威能</h3>
+    <ul>
+        <li><a class="store-name" href="https://lin.ee/Stzqk8d" target="_blank">台北大巨蛋店funbox</a></li>
+        <li><a class="store-name" href="https://lin.ee/WiTikvvy" target="_blank">忠孝Sogo funbox</a></li>
+        <li><a class="store-name" href="https://lin.ee/RU9VBdJ" target="_blank">Funbox 天母SOGO</a></li>
+        <li><a class="store-name" href="https://lin.ee/OSPw7Ho" target="_blank">Funbox天母三越</a></li>
+        <li><a class="store-name" href="https://lin.ee/sJiCZwR" target="_blank">Funbox-新光三越站前店</a></li>
+        <li><a class="store-name" href="https://lin.ee/vwq27EK" target="_blank">Funbox-南港潤泰</a></li>
+        <li><a class="store-name" href="https://lin.ee/7ukC3qG" target="_blank">Funbox-信義A8</a></li>
+        <li><a class="store-name" href="https://lin.ee/TChapUa" target="_blank">Funbox 樹林秀泰</a></li>
+        <li><a class="store-name" href="https://lin.ee/uKOxRt7" target="_blank">Funbox-新店誠品-裕隆城</a></li>
+        <li><a class="store-name" href="https://lin.ee/WRBEjBM" target="_blank">Funbox 板橋大遠百</a></li>
+        <li><a class="store-name" href="https://lin.ee/u1KhsQw" target="_blank">Funbox 中和環球</a></li>
+        <li><a class="store-name" href="https://lin.ee/yGeEtjK" target="_blank">funbox板橋遠百中山店</a></li>
+        <li><a class="store-name" href="https://lin.ee/Yqd9XJV" target="_blank">FunBox-環球桃園A19</a></li>
+        <li><a class="store-name" href="https://lin.ee/YOnDqu8" target="_blank">Funbox Toys 桃園新光站前店</a></li>
+    </ul>
+
+    <h3>UX-15 鮫鯊狂鱗改造組</h3>
+    <ul>
+        <li><a class="store-name" href="https://lin.ee/7WAq435" target="_blank">台北大巨蛋店funbox</a></li>
+        <li><a class="store-name" href="https://lin.ee/8KnCSl8R" target="_blank">忠孝Sogo funbox</a></li>
+        <li><a class="store-name" href="https://lin.ee/oy3oCkUC" target="_blank">Funbox 天母SOGO</a></li>
+        <li><a class="store-name" href="https://lin.ee/SEuq9Rw" target="_blank">Funbox遠百信義 A13</a></li>
+        <li><a class="store-name" href="https://lin.ee/ytSYkW9" target="_blank">Funbox天母三越</a></li>
+        <li><a class="store-name" href="https://lin.ee/vgFw1zA" target="_blank">Funbox-新光三越站前店</a></li>
+        <li><a class="store-name" href="https://lin.ee/tW9LP8f" target="_blank">Funbox-南港潤泰</a></li>
+        <li><a class="store-name" href="https://lin.ee/9WebNwX" target="_blank">Funbox-信義A8</a></li>
+        <li><a class="store-name" href="https://lin.ee/XGiGWCF" target="_blank">Funbox 樹林秀泰</a></li>
+        <li><a class="store-name" href="https://lin.ee/uCKAJ6S" target="_blank">Funbox-新店誠品-裕隆城</a></li>
+        <li><a class="store-name" href="https://lin.ee/wWNx0DB" target="_blank">Funbox 板橋大遠百</a></li>
+        <li><a class="store-name" href="https://lin.ee/vJiN2dv" target="_blank">Funbox 中和環球</a></li>
+        <li><a class="store-name" href="https://lin.ee/pDoTf34" target="_blank">funbox板橋遠百中山店</a></li>
+        <li><a class="store-name" href="https://lin.ee/p95mSoO" target="_blank">FunBox-環球桃園A19</a></li>
+        <li><a class="store-name" href="https://lin.ee/vXOPypA" target="_blank">Funbox Toys 桃園新光站前店</a></li>
+    </ul>
+
+    <h3>UX-03 魔導神杖</h3>
+    <ul>
+        <li><a class="store-name" href="https://lin.ee/sxzKaFm8" target="_blank">台北大巨蛋店funbox</a></li>
+        <li><a class="store-name" href="https://lin.ee/xeHYbqd" target="_blank">忠孝Sogo funbox</a></li>
+        <li><a class="store-name" href="https://lin.ee/SS3Qboh" target="_blank">Funbox 天母SOGO</a></li>
+        <li><a class="store-name" href="https://lin.ee/PtYZJxN" target="_blank">Funbox遠百信義 A13</a></li>
+        <li><a class="store-name" href="https://lin.ee/X0vwhfj" target="_blank">Funbox天母三越</a></li>
+        <li><a class="store-name" href="https://lin.ee/XvBZKlg" target="_blank">Funbox-新光三越站前店</a></li>
+        <li><a class="store-name" href="https://lin.ee/qCHfdSx" target="_blank">Funbox-南港潤泰</a></li>
+        <li><a class="store-name" href="https://lin.ee/VEQJzC3" target="_blank">Funbox-信義A8</a></li>
+        <li><a class="store-name" href="https://lin.ee/vbgQZUR" target="_blank">Funbox 樹林秀泰</a></li>
+        <li><a class="store-name" href="https://lin.ee/7otdg5h" target="_blank">Funbox-新店誠品-裕隆城</a></li>
+        <li><a class="store-name" href="https://lin.ee/6lOvA7Y" target="_blank">Funbox 板橋大遠百</a></li>
+        <li><a class="store-name" href="https://lin.ee/TJSJjho" target="_blank">Funbox 中和環球</a></li>
+        <li><a class="store-name" href="https://lin.ee/X8sxw4V" target="_blank">funbox板橋遠百中山店</a></li>
+        <li><a class="store-name" href="https://lin.ee/rZX23vR" target="_blank">FunBox-環球桃園A19</a></li>
+        <li><a class="store-name" href="https://lin.ee/nxwYe6U" target="_blank">Funbox Toys 桃園新光站前店</a></li>
+    </ul>
+
+    <h3>CX-16 極限衝擊對戰組C</h3>
+    <ul>
+        <li><a class="store-name" href="https://lin.ee/pKMo7GE" target="_blank">忠孝Sogo funbox</a></li>
+        <li><a class="store-name" href="https://lin.ee/QEkIkNw" target="_blank">Funbox 天母SOGO</a></li>
+        <li><a class="store-name" href="https://lin.ee/yB5uVtL" target="_blank">Funbox遠百信義 A13</a></li>
+        <li><a class="store-name" href="https://lin.ee/5k9A5Lg" target="_blank">Funbox天母三越</a></li>
+        <li><a class="store-name" href="https://lin.ee/7llCkA6" target="_blank">Funbox-南港潤泰</a></li>
+        <li><a class="store-name" href="https://lin.ee/7qZYwKM" target="_blank">Funbox-信義A8</a></li>
+        <li><a class="store-name" href="https://lin.ee/xBMpnkL" target="_blank">Funbox 樹林秀泰</a></li>
+        <li><a class="store-name" href="https://lin.ee/z3ExN0d" target="_blank">Funbox-新店誠品-裕隆城</a></li>
+        <li><a class="store-name" href="https://lin.ee/WNs3mNZ" target="_blank">Funbox 板橋大遠百</a></li>
+        <li><a class="store-name" href="https://lin.ee/t9AdfOl" target="_blank">Funbox 中和環球</a></li>
+        <li><a class="store-name" href="https://lin.ee/xrnvDX8" target="_blank">funbox板橋遠百中山店</a></li>
+        <li><a class="store-name" href="https://lin.ee/unrHrX2" target="_blank">FunBox-環球桃園A19</a></li>
+    </ul>
+
+    <h3>CX-00 新世紀福音戰士改造組</h3>
+    <ul>
+        <li><a class="store-name" href="https://lin.ee/Pmk8iM1" target="_blank">台北大巨蛋店funbox</a></li>
+        <li><a class="store-name" href="https://lin.ee/Y6247D2" target="_blank">忠孝Sogo funbox</a></li>
+        <li><a class="store-name" href="https://lin.ee/QyozSVa" target="_blank">Funbox 天母SOGO</a></li>
+        <li><a class="store-name" href="https://lin.ee/oMVrdfL" target="_blank">Funbox遠百信義 A13</a></li>
+        <li><a class="store-name" href="https://lin.ee/O6EBXcC" target="_blank">Funbox天母三越</a></li>
+        <li><a class="store-name" href="https://lin.ee/usaDh5J" target="_blank">Funbox-新光三越站前店</a></li>
+        <li><a class="store-name" href="https://lin.ee/7XX2Yib" target="_blank">Funbox-南港潤泰</a></li>
+        <li><a class="store-name" href="https://lin.ee/VeGdajx" target="_blank">Funbox-信義A8</a></li>
+        <li><a class="store-name" href="https://lin.ee/TbKAVfH" target="_blank">Funbox 樹林秀泰</a></li>
+        <li><a class="store-name" href="https://lin.ee/N5lTSUH" target="_blank">Funbox-新店誠品-裕隆城</a></li>
+        <li><a class="store-name" href="https://lin.ee/7g2a6vt" target="_blank">Funbox 板橋大遠百</a></li>
+        <li><a class="store-name" href="https://lin.ee/Uo68eoZ" target="_blank">Funbox 中和環球</a></li>
+        <li><a class="store-name" href="https://lin.ee/OSxEgYb" target="_blank">funbox板橋遠百中山店</a></li>
+        <li><a class="store-name" href="https://lin.ee/vyUsS03" target="_blank">FunBox-環球桃園A19</a></li>
+        <li><a class="store-name" href="https://lin.ee/64u8OUS" target="_blank">Funbox Toys 桃園新光站前店</a></li>
+    </ul>
+
+    <h3>UX-20 榮耀武神LF</h3>
+    <ul>
+        <li><a class="store-name" href="https://lin.ee/vODNwsEd" target="_blank">台北大巨蛋店funbox</a></li>
+        <li><a class="store-name" href="https://lin.ee/XEshJg9" target="_blank">忠孝Sogo funbox</a></li>
+        <li><a class="store-name" href="https://lin.ee/PyrM6qd" target="_blank">Funbox 天母SOGO</a></li>
+        <li><a class="store-name" href="https://lin.ee/y96QeFQ" target="_blank">Funbox遠百信義 A13</a></li>
+        <li><a class="store-name" href="https://lin.ee/uVNPbtI" target="_blank">Funbox天母三越</a></li>
+        <li><a class="store-name" href="https://lin.ee/zUfJfP0" target="_blank">Funbox-新光三越站前店</a></li>
+        <li><a class="store-name" href="https://lin.ee/QtUquaf" target="_blank">Funbox-南港潤泰</a></li>
+        <li><a class="store-name" href="https://lin.ee/Phbzbw3" target="_blank">Funbox-信義A8</a></li>
+        <li><a class="store-name" href="https://lin.ee/YPnrRk1" target="_blank">Funbox 樹林秀泰</a></li>
+        <li><a class="store-name" href="https://lin.ee/75H4hw2" target="_blank">Funbox-新店誠品-裕隆城</a></li>
+        <li><a class="store-name" href="https://lin.ee/worKtlI" target="_blank">Funbox 板橋大遠百</a></li>
+        <li><a class="store-name" href="https://lin.ee/v53C4OE" target="_blank">Funbox 中和環球</a></li>
+        <li><a class="store-name" href="https://lin.ee/zYH5Tbw" target="_blank">funbox板橋遠百中山店</a></li>
+        <li><a class="store-name" href="https://lin.ee/6OStfzH" target="_blank">FunBox-環球桃園A19</a></li>
+        <li><a class="store-name" href="https://lin.ee/Pzm9qB8" target="_blank">Funbox Toys 桃園新光站前店</a></li>
+    </ul>
+
+    <h3>UX-19 子彈獅鷲H</h3>
+    <ul>
+        <li><a class="store-name" href="https://lin.ee/NUJbrDq" target="_blank">台北大巨蛋店funbox</a></li>
+        <li><a class="store-name" href="https://lin.ee/NTHIx7n" target="_blank">忠孝Sogo funbox</a></li>
+        <li><a class="store-name" href="https://lin.ee/r7vciGu" target="_blank">Funbox 天母SOGO</a></li>
+        <li><a class="store-name" href="https://lin.ee/WZqCvGH" target="_blank">Funbox遠百信義 A13</a></li>
+        <li><a class="store-name" href="https://lin.ee/Xh4jZ6C" target="_blank">Funbox天母三越</a></li>
+        <li><a class="store-name" href="https://lin.ee/njnLUe4" target="_blank">Funbox-新光三越站前店</a></li>
+        <li><a class="store-name" href="https://lin.ee/tOEJRss" target="_blank">Funbox-南港潤泰</a></li>
+        <li><a class="store-name" href="https://lin.ee/SKirLcd" target="_blank">Funbox-信義A8</a></li>
+        <li><a class="store-name" href="https://lin.ee/TBAna6V" target="_blank">Funbox 樹林秀泰</a></li>
+        <li><a class="store-name" href="https://lin.ee/P1qNYyV" target="_blank">Funbox-新店誠品-裕隆城</a></li>
+        <li><a class="store-name" href="https://lin.ee/onLU7z8" target="_blank">Funbox 板橋大遠百</a></li>
+        <li><a class="store-name" href="https://lin.ee/Zx8F0jO" target="_blank">Funbox 中和環球</a></li>
+        <li><a class="store-name" href="https://lin.ee/V7muDoD" target="_blank">funbox板橋遠百中山店</a></li>
+        <li><a class="store-name" href="https://lin.ee/PV1A9yi" target="_blank">FunBox-環球桃園A19</a></li>
+        <li><a class="store-name" href="https://lin.ee/7hZVM1E" target="_blank">Funbox Toys 桃園新光站前店</a></li>
+    </ul>
+
+    <h3>CX-19 鱷魚裂甲 (隨機強化組)</h3>
+    <ul>
+        <li><a class="store-name" href="https://lin.ee/TV9MYTU" target="_blank">台北大巨蛋店funbox</a></li>
+        <li><a class="store-name" href="https://lin.ee/T2PRZhP" target="_blank">忠孝Sogo funbox</a></li>
+        <li><a class="store-name" href="https://lin.ee/6oFBWpJ" target="_blank">Funbox 天母SOGO</a></li>
+        <li><a class="store-name" href="https://lin.ee/pBJLgiu" target="_blank">Funbox遠百信義 A13</a></li>
+        <li><a class="store-name" href="https://lin.ee/uJYUwGX" target="_blank">Funbox天母三越</a></li>
+        <li><a class="store-name" href="https://lin.ee/USeuBL5" target="_blank">Funbox-新光三越站前店</a></li>
+        <li><a class="store-name" href="https://lin.ee/vijTYLN" target="_blank">Funbox-南港潤泰</a></li>
+        <li><a class="store-name" href="https://lin.ee/9HZob3M" target="_blank">Funbox-信義A8</a></li>
+        <li><a class="store-name" href="https://lin.ee/VErVVSy" target="_blank">Funbox 樹林秀泰</a></li>
+        <li><a class="store-name" href="https://lin.ee/nDiqthy" target="_blank">Funbox-新店誠品-裕隆城</a></li>
+        <li><a class="store-name" href="https://lin.ee/vuMIKiU" target="_blank">Funbox 板橋大遠百</a></li>
+        <li><a class="store-name" href="https://lin.ee/zsClsW5" target="_blank">Funbox 中和環球</a></li>
+        <li><a class="store-name" href="https://lin.ee/QOcZMvt" target="_blank">funbox板橋遠百中山店</a></li>
+        <li><a class="store-name" href="https://lin.ee/qupdDqV" target="_blank">FunBox-環球桃園A19</a></li>
+        <li><a class="store-name" href="https://lin.ee/57xH5R8" target="_blank">Funbox Toys 桃園新光站前店</a></li>
+    </ul>
+
+    <h2>【戰鬥盤系列】</h2>
+    
+    <h3>BX-37 雙重極限衝擊戰鬥盤 豪華組</h3>
+    <ul>
+        <li><a class="store-name" href="https://lin.ee/NPVAoDT" target="_blank">台北大巨蛋店funbox</a></li>
+        <li><a class="store-name" href="https://lin.ee/VMkcJYH" target="_blank">忠孝Sogo funbox</a></li>
+        <li><a class="store-name" href="https://lin.ee/q0kdNkb" target="_blank">Funbox 天母SOGO</a></li>
+        <li><a class="store-name" href="https://lin.ee/p5lJKAT" target="_blank">Funbox遠百信義 A13</a></li>
+        <li><a class="store-name" href="https://lin.ee/R7S8fmP" target="_blank">Funbox天母三越</a></li>
+        <li><a class="store-name" href="https://lin.ee/RI51Vx8" target="_blank">Funbox-新光三越站前店</a></li>
+        <li><a class="store-name" href="https://lin.ee/RV7ycwV" target="_blank">Funbox-南港潤泰</a></li>
+        <li><a class="store-name" href="https://lin.ee/wRz58zo" target="_blank">Funbox-信義A8</a></li>
+        <li><a class="store-name" href="https://lin.ee/ngjUBSm" target="_blank">Funbox 樹林秀泰</a></li>
+        <li><a class="store-name" href="https://lin.ee/qlrFB7z" target="_blank">Funbox-新店誠品-裕隆城</a></li>
+        <li><a class="store-name" href="https://lin.ee/5GpJ4Ai" target="_blank">Funbox 板橋大遠百</a></li>
+        <li><a class="store-name" href="https://lin.ee/OE9U5Qg" target="_blank">Funbox 中和環球</a></li>
+        <li><a class="store-name" href="https://lin.ee/oEJGoh9" target="_blank">funbox板橋遠百中山店</a></li>
+        <li><a class="store-name" href="https://lin.ee/PvNofBo" target="_blank">FunBox-環球桃園A19</a></li>
+        <li><a class="store-name" href="https://lin.ee/v5uMKHD" target="_blank">Funbox Toys 桃園新光站前店</a></li>
+    </ul>
+
+    <h3>BX-10 極限衝擊戰鬥盤</h3>
+    <ul>
+        <li><a class="store-name" href="https://lin.ee/84qAerv" target="_blank">Funbox 樹林秀泰</a></li>
+    </ul>
+
+    <!-- 利用 JavaScript 自動為每個清單項目產生「前往」按鈕 -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // 找出所有的 li 標籤
+            const listItems = document.querySelectorAll("li");
+            
+            listItems.forEach(li => {
+                // 找到該項目內的原始連結
+                const link = li.querySelector("a.store-name");
+                
+                if (link) {
+                    const url = link.getAttribute("href");
+                    
+                    // 建立新的按鈕元素 (使用 <a> 標籤模擬按鈕，避免被瀏覽器阻擋彈出視窗)
+                    const btn = document.createElement("a");
+                    btn.href = url;
+                    btn.target = "_blank";
+                    btn.className = "go-btn";
+                    btn.innerText = "前往";
+                    
+                    // 綁定點擊事件，點擊後改變文字與顏色
+                    btn.addEventListener("click", function() {
+                        this.innerText = "已點擊";
+                        this.classList.add("clicked");
+                    });
+                    
+                    // 將新建立的按鈕加到 li 的最右側
+                    li.appendChild(btn);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
