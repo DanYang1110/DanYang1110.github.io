@@ -492,15 +492,35 @@
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const listItems = document.querySelectorAll("li");
+            const clickedStorageKey = "funboxClickedLinks";
+            let clickedLinks = new Set();
+
+            try {
+                clickedLinks = new Set(JSON.parse(localStorage.getItem(clickedStorageKey) || "[]"));
+            } catch (error) {
+                clickedLinks = new Set();
+            }
 
             listItems.forEach(li => {
                 const link = li.querySelector("a.store-name");
                 if (!link) return;
 
+                const linkUrl = link.getAttribute("href");
+                if (clickedLinks.has(linkUrl)) {
+                    li.classList.add("clicked");
+                }
+
                 li.style.cursor = "pointer";
 
                 li.addEventListener("click", function(e) {
                     li.classList.add("clicked");
+                    clickedLinks.add(linkUrl);
+
+                    try {
+                        localStorage.setItem(clickedStorageKey, JSON.stringify([...clickedLinks]));
+                    } catch (error) {
+                        // 瀏覽器停用儲存功能時，仍保留本次瀏覽期間的變色效果
+                    }
 
                     // 如果點擊的不是連結本身，手動觸發連結的原生點擊
                     // （比手動用 window.open 更穩定，可避免部分手機瀏覽器卡空白頁）
